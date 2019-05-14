@@ -1,0 +1,92 @@
+
+.box{
+    display: flex;
+    justify-content: flex-start;
+    background: #6441a5;
+    /* padding-left: 400px; */
+    flex-wrap: wrap;
+   
+}
+
+.user{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 5px;
+    background-color: #6441a5;
+    border: 5px solid black;
+    width: 360px;
+    height:255px;
+    text-align: center;
+}
+
+.pictureContainer{
+ 
+    display: flex;
+    justify-content: center;
+    flex-direction: row
+}
+.picture{
+    height: 40px;
+    width: 40px;
+}
+
+.info{
+    display :flex;
+    flex-direction: column;
+    width:200px;
+    text-align: left;
+  
+}
+a{
+    color:black
+}
+
+img{
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 5px
+}
+
+div{
+    
+    
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    
+}
+
+/* 
+
+const imgStyle = {
+    borderRadius: '10px',
+    border: '1px solid black',
+ }
+const ulStyle = {   
+    border: '5px solid black',
+    background: '#6441a5',
+    // margin: 'auto',
+    textAlign: 'center',
+   //a marginBottom: '5px',
+    tableLayout: 'fixed',
+
+    width: '300px',
+    height:'255px'
+  };
+
+  const divStyle = {
+     marginRight: '35px',
+    // marginTop: '1px',
+    // marginBottom: '1px',
+    // marginLeft: '1px'
+  }
+
+  const aStyle = {
+    color:'black'
+  }
+  const pStyle = {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden'
+  } */
