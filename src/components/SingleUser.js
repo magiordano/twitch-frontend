@@ -19,7 +19,7 @@ export default class extends Component {
             <div><a href ={`https://twitch.tv/${user.user_name}`}><img src={user.thumbnail_url.replace('{width}x{height}', '301x169')}alt='Img Not Found'></img></a></div>
      
             <div className='pictureContainer'>
-            <div><img className='picture' src = {user.picture}></img></div>    
+            <div className='icon'><img className='picture' src = {user.picture}></img></div>    
             
             
                <div className='info'>

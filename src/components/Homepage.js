@@ -62,7 +62,7 @@ class Homepage extends Component {
     }
     
     getFirstOccurence = async () =>{
-        let newUsers = await fetch('http://localhost:5000/sendResults', {
+        let newUsers = await fetch('https://sheltered-ridge-17065.herokuapp.com/sendResults', {
             method: 'get',
           })
            .then(res => res.json()) 
@@ -86,10 +86,11 @@ class Homepage extends Component {
     render() {
        
         return (
-          
+    
           <div className='box'>
               {(this.state.users)}      
           </div>
+
         );
     }
 }

@@ -7,7 +7,12 @@
     flex-wrap: wrap;
    
 }
-
+.icon{
+  
+    margin-top: 2%;
+    margin-right:2%
+    
+}
 .user{
     display: flex;
     justify-content: flex-start;
@@ -24,7 +29,9 @@
  
     display: flex;
     justify-content: center;
-    flex-direction: row
+    flex-direction: row;
+    
+
 }
 .picture{
     height: 40px;
@@ -33,9 +40,10 @@
 
 .info{
     display :flex;
-    flex-direction: column;
+    flex-direction: column; 
     width:200px;
     text-align: left;
+    margin-right: 15%
   
 }
 a{
@@ -57,36 +65,3 @@ div{
     
 }
 
-/* 
-
-const imgStyle = {
-    borderRadius: '10px',
-    border: '1px solid black',
- }
-const ulStyle = {   
-    border: '5px solid black',
-    background: '#6441a5',
-    // margin: 'auto',
-    textAlign: 'center',
-   //a marginBottom: '5px',
-    tableLayout: 'fixed',
-
-    width: '300px',
-    height:'255px'
-  };
-
-  const divStyle = {
-     marginRight: '35px',
-    // marginTop: '1px',
-    // marginBottom: '1px',
-    // marginLeft: '1px'
-  }
-
-  const aStyle = {
-    color:'black'
-  }
-  const pStyle = {
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden'
-  } */
