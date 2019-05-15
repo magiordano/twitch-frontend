@@ -4,11 +4,13 @@ import SingleUser from './SingleUser';
 
 
 let newStreamers;
+let avgStreamers;
 class Homepage extends Component {
 
       
     state = {
-     users: 'Loading'
+     users: 'Loading ',
+     avgUsers:'Please Wait'
     }
 
      getGame = async (newUsers) =>{
@@ -78,17 +80,35 @@ class Homepage extends Component {
             // this.getGame(this.state.users)
     }
 
+    getHigherAverage = async () => {
+      let averageUsers = await fetch('http://localhost:5000/higherAverage', {
+        method: 'get',
+      })
+       .then(res => res.json()) 
+
+
+       averageUsers = await this.getGame(averageUsers);
+      
+
+       //console.log(newUsers)
+         avgStreamers = await averageUsers.data.map((user) => <SingleUser  data={user}/>)     
+         await this.setState({avgUsers: avgStreamers})
+
+    }
+
 
 
      componentDidMount (){
-         this.getFirstOccurence()        
+         this.getFirstOccurence()  
+         this.getHigherAverage()      
     }
     render() {
        
         return (
     
           <div className='box'>
-              {(this.state.users)}      
+              {(this.state.users)}   
+              {(this.state.avgUsers)}  
           </div>
 
         );
