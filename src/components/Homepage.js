@@ -81,7 +81,7 @@ class Homepage extends Component {
     }
 
     getHigherAverage = async () => {
-      let averageUsers = await fetch('http://localhost:5000/higherAverage', {
+      let averageUsers = await fetch('https://sheltered-ridge-17065.herokuapp.com/higherAverage', {
         method: 'get',
       })
        .then(res => res.json()) 
