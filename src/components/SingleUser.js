@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react'
-import Col from 'react-bootstrap/Col'
-
-
+import Numeral from 'numeral'
 
 
 export default class extends Component {
@@ -16,17 +14,19 @@ export default class extends Component {
         return ( 
             <div className='user'>
     
-            <div><a href ={`https://twitch.tv/${user.user_name}`}><img src={user.thumbnail_url.replace('{width}x{height}', '301x169')}alt='Img Not Found'></img></a></div>
-     
+            <div className='preview'><a href ={`https://twitch.tv/${user.user_name}`}><img src={user.thumbnail_url.replace('{width}x{height}', '301x169')}alt='Img Not Found'></img></a>
+            <div class="bottom-left">{Numeral(user.viewer_count).format('0.0a')} viewers</div>
+            </div>
+
             <div className='pictureContainer'>
             <div className='icon'><img className='picture' src = {user.picture}></img></div>    
             
             
                <div className='info'>
                 <div><a href ={`https://twitch.tv/${user.user_name}`}> {user.title}</a></div>
-                <div>{user.user_name}</div>
+                <div><a href={`https://twitch.tv/${user.user_name}/videos`}>{user.user_name}</a></div>
                 <div>{user.game_name}</div>
-                <div>{user.viewer_count.toLocaleString('en')} Viewers </div>
+    
               </div>
               
             </div>

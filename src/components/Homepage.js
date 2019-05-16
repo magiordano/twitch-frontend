@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SingleUser from './SingleUser';
-
+import {Navbar} from 'react-bootstrap'
 
 
 let newStreamers;
@@ -9,8 +9,8 @@ class Homepage extends Component {
 
       
     state = {
-     users: 'Loading ',
-     avgUsers:'Please Wait'
+     users: '',
+     avgUsers:''
     }
 
      getGame = async (newUsers) =>{
@@ -47,6 +47,9 @@ class Homepage extends Component {
     }).then(res => res.json())
     
     for(let i = 0; i<newUsers.data.length; i++){
+        if(newStreams.length === 0){
+          break;
+        }
         newUsers.data[i].picture = newStreams.data[i].profile_image_url
 
         //
@@ -99,18 +102,32 @@ class Homepage extends Component {
 
 
      componentDidMount (){
-         this.getFirstOccurence()  
-         this.getHigherAverage()      
+       
+      this.getHigherAverage()    
+      this.getFirstOccurence()  
+  
     }
     render() {
        
         return (
-    
-          <div className='box'>
-              {(this.state.users)}   
-              {(this.state.avgUsers)}  
-          </div>
+          <div> 
+            <Navbar expand="lg" variant="light" >
+       
+       <Navbar.Brand >Higher Average Streamers</Navbar.Brand>
 
+        </Navbar>
+          <div className='box'>
+              {(this.state.avgUsers)}
+              </div> 
+              <Navbar expand="lg" variant="light" >
+     
+       <Navbar.Brand >New Top Streamers</Navbar.Brand>
+  
+        </Navbar>
+          <div className='box'>
+              {(this.state.users)}      
+          </div>
+          </div>
         );
     }
 }
