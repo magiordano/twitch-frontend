@@ -50,6 +50,13 @@ class Homepage extends Component {
         if(newStreams.length === 0){
           break;
         }
+        if(newUsers.data.length === 0){
+          break;
+        }
+        if(newStreams.data[i] === undefined){
+          break;
+        }
+
         newUsers.data[i].picture = newStreams.data[i].profile_image_url
 
         //
@@ -108,7 +115,13 @@ class Homepage extends Component {
   
     }
     render() {
-       
+       if(this.state.avgUsers.length ===0){
+         return(
+         <div className='loading'><div className="lds-circle"><div></div></div></div>
+
+           )
+       }
+       else
         return (
           <div> 
             <Navbar expand="lg" variant="light" >
