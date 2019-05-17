@@ -113,7 +113,7 @@ class Homepage extends Component {
           <div> 
             <Navbar expand="lg" variant="light" >
        
-       <Navbar.Brand >Higher Average Streamers</Navbar.Brand>
+       <Navbar.Brand><h2>Higher Average Streamers</h2></Navbar.Brand>
 
         </Navbar>
           <div className='box'>
@@ -121,7 +121,7 @@ class Homepage extends Component {
               </div> 
               <Navbar expand="lg" variant="light" >
      
-       <Navbar.Brand >New Top Streamers</Navbar.Brand>
+       <Navbar.Brand><h2>New Top Streamers</h2></Navbar.Brand>
   
         </Navbar>
           <div className='box'>

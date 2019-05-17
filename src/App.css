@@ -7,6 +7,9 @@
     flex-wrap: wrap;
    
 }
+h2{
+    padding-left: 16px
+}
 .icon{
   
 
@@ -76,7 +79,6 @@ img{
     color: white;
   }
 div{
-    
     
         white-space: nowrap;
         overflow: hidden;
