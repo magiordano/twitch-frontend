@@ -2,10 +2,21 @@
 .box{
     display: flex;
     justify-content: flex-start;
+    /* align-items: center; */
     background: whitesmoke;
-    padding-left: 38px;
+    /* justify-content: center; */
     flex-wrap: wrap;
+    /* padding-left: 100px; */
+    
+    margin:auto;
    
+}
+.mainContent{
+    width: 100%;
+    margin: auto;
+}
+body{
+    width: 100vw;
 }
 h2{
     padding-left: 50px
@@ -20,7 +31,7 @@ h2{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-   
+   /* margin:auto; */
     background-color: whitesmoke;
     /* border: 5px solid black; */
     width: 360px;

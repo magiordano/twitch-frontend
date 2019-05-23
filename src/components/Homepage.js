@@ -74,7 +74,7 @@ class Homepage extends Component {
     }
     
     getFirstOccurence = async () =>{
-        let newUsers = await fetch('https://sheltered-ridge-17065.herokuapp.com/sendResults', {
+        let newUsers = await fetch('http://magiordano.com:5000/sendResults', {
             method: 'get',
           })
            .then(res => res.json()) 
@@ -91,7 +91,7 @@ class Homepage extends Component {
     }
 
     getHigherAverage = async () => {
-      let averageUsers = await fetch('https://sheltered-ridge-17065.herokuapp.com/higherAverage', {
+      let averageUsers = await fetch('http://magiordano.com:5000/higherAverage', {
         method: 'get',
       })
        .then(res => res.json()) 
@@ -123,7 +123,7 @@ class Homepage extends Component {
        }
        else
         return (
-          <div> 
+          <div className ='mainContent'> 
             <Navbar expand="lg" variant="light" >
        
        <Navbar.Brand><h2>Higher Average Streamers</h2></Navbar.Brand>
