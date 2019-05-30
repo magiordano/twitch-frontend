@@ -23,8 +23,9 @@ export default class extends Component {
             
             
                <div className='info'>
-                <div><a href ={`https://twitch.tv/${user.user_name}`}> {user.title}</a></div>
+                <div><a href ={`https://twitch.tv/${user.user_name}`}>{user.title}</a></div>
                 <div><a href={`https://twitch.tv/${user.user_name}/videos`}>{user.user_name}</a></div>
+                <div></div>{}
                 <div>{user.game_name}</div>
     
               </div>
